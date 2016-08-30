@@ -7,4 +7,6 @@ RUN yum -y install nss_wrapper gettext
 COPY s2i /usr/libexec/s2i
 RUN chmod 777 -R /usr/libexec/s2i
 
+COPY passwd.template passwd.template
+
 USER 1001
